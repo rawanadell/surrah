@@ -1,0 +1,969 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-cairo: "Cairo", sans-serif;
+  --font-ibm-plex-arabic: "IBM Plex Sans Arabic", sans-serif;
+  --font-ibm-plex: "IBM Plex Sans", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  
+  /* Custom Colors */
+  --color-on-primary-fixed: #071a3b;
+  --color-on-tertiary-fixed-variant: #354860;
+  --color-surface: #f9f9f6;
+  --color-outline-variant: #c5c6cf;
+  --color-on-background: #1a1c1b;
+  --color-inverse-surface: #2f312f;
+  --color-inverse-primary: #b6c6f0;
+  --color-surface-dim: #dadad7;
+  --color-error-container: #ffdad6;
+  --color-secondary-container: #fdce5e;
+  --color-secondary-fixed-dim: #eec052;
+  --color-dark-surface: #000C18;
+  --color-primary-container: #071a3b;
+  --color-primary-fixed: #d8e2ff;
+  --color-outline: #75777f;
+  --color-tertiary-container: #061c33;
+  --color-tertiary-fixed-dim: #b4c8e5;
+  --color-inactive-gray: #8C96A8;
+  --color-on-tertiary-fixed: #061c33;
+  --color-surface-tint: #4e5e82;
+  --color-on-tertiary: #ffffff;
+  --color-on-surface: #1a1c1b;
+  --color-surface-variant: #e2e3e0;
+  --color-surface-container-low: #f4f4f1;
+  --color-on-primary-container: #7384aa;
+  --color-surface-container-high: #e8e8e5;
+  --color-on-secondary-fixed: #251a00;
+  --color-on-primary: #ffffff;
+  --color-tertiary-fixed: #d2e4ff;
+  --color-on-secondary-fixed-variant: #5a4300;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-primary-fixed-variant: #364669;
+  --color-on-error: #ffffff;
+  --color-primary-fixed-dim: #b6c6f0;
+  --color-on-tertiary-container: #7285a0;
+  --color-primary: #000000;
+  --color-error: #ba1a1a;
+  --color-on-secondary: #ffffff;
+  --color-background: #f9f9f6;
+  --color-on-error-container: #93000a;
+  --color-on-secondary-container: #745700;
+  --color-tertiary: #000000;
+  --color-surface-container-highest: #e2e3e0;
+  --color-surface-container: #eeeeeb;
+  --color-secondary: #785a00;
+  --color-on-surface-variant: #44474e;
+  --color-inverse-on-surface: #f1f1ee;
+  --color-surface-bright: #f9f9f6;
+  --color-secondary-fixed: #ffdf9a;
+  --color-dark-bg: #000814;
+  
+  /* Spacing */
+  --spacing-stack-lg: 24px;
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 16px;
+  --spacing-margin-desktop: 48px;
+  --spacing-stack-md: 16px;
+  --spacing-unit: 4px;
+  --spacing-stack-sm: 8px;
+  
+  /* Tailwind spacing override to match HTML */
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-12: 48px;
+  --spacing-gutter: 16px;
+  --spacing-stack-lg: 24px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-sm: 8px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 48px;
+  --spacing-unit: 4px;
+  
+  /* Border Radius */
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-full: 9999px;
+}
+
+* {
+  font-family: "IBM Plex Sans Arabic", "Cairo", sans-serif;
+}
+
+body {
+  background-color: var(--color-background, #f9f9f6);
+  color: var(--color-on-background, #1a1c1b);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+.gold-gradient-text {
+  color: #eec052;
+}
+
+.text-gold { 
+  color: #eec052; 
+}
+
+.bg-gold { 
+  background-color: #eec052; 
+}
+
+.border-gold { 
+  border-color: #eec052; 
+}
+
+.text-navy { 
+  color: #071a3b; 
+}
+
+.bg-navy { 
+  background-color: #071a3b; 
+}
+
+.border-navy { 
+  border-color: #071a3b; 
+}
+
+.card-surface {
+  background-color: #ffffff;
+  border: 1px solid rgba(7, 26, 59, 0.1);
+  border-radius: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #eec052;
+  color: #071a3b;
+  border-radius: 16px;
+}
+
+/* Additional colors from HTML template */
+.bg-\[#001233\] {
+  background-color: #001233;
+}
+
+.bg-\[#E5B84A\] {
+  background-color: #E5B84A;
+}
+
+.bg-\[#00152B\] {
+  background-color: #00152B;
+}
+
+.text-\[#001233\] {
+  color: #001233;
+}
+
+.text-\[#E5B84A\] {
+  color: #E5B84A;
+}
+
+.border-\[#E5B84A\] {
+  border-color: #E5B84A;
+}
+
+/* Gold and Navy utility classes */
+.text-gold { 
+  color: #E5B84A; 
+}
+
+.bg-gold { 
+  background-color: #E5B84A; 
+}
+
+.border-gold { 
+  border-color: #E5B84A; 
+}
+
+.text-navy { 
+  color: #001233; 
+}
+
+.bg-navy { 
+  background-color: #001233; 
+}
+
+.border-navy { 
+  border-color: #001233; 
+}
+
+/* Font classes matching HTML template */
+.font-body-md {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.font-body-lg {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.font-display-lg-mobile {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.font-display-lg {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.font-label-lg {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.font-label-sm {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.font-numeric-data {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+/* Additional utility classes */
+.num-font {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* Manrope font classes for FAQ page */
+.font-body-md-manrope {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.font-label-lg-manrope {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.font-headline-xl-manrope {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.font-headline-md-manrope {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.font-body-lg-manrope {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+/* Additional Manrope font classes for Contact page */
+.font-label-md {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.font-body-sm {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.font-headline-lg {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+/* Additional spacing utilities for Contact page */
+.pb-margin-desktop {
+  padding-bottom: 48px;
+}
+
+.pt-32 {
+  padding-top: 128px;
+}
+
+.gap-stack-lg {
+  gap: 24px;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.border-outline-variant\/20 {
+  border-color: rgba(197, 198, 207, 0.2);
+}
+
+.shadow-\[0_4px_24px_rgba\(0,0,0,0\.02\)\] {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+}
+
+.shadow-\[0_8px_32px_rgba\(0,0,0,0\.04\)\] {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-secondary {
+  --tw-gradient-from: #785a00;
+  --tw-gradient-to: #eec052;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-secondary-fixed {
+  --tw-gradient-to: #eec052;
+}
+
+.p-margin-mobile {
+  padding: 20px;
+}
+
+.md\:p-margin-desktop {
+  padding: 48px;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Cairo font classes for Privacy page */
+.font-body-lg {
+  font-family: "Cairo", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.font-label-lg {
+  font-family: "Cairo", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.font-headline-xl {
+  font-family: "Cairo", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-family: "Cairo", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.font-body-md {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.font-headline-lg-mobile {
+  font-family: "Cairo", sans-serif;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+.font-headline-lg {
+  font-family: "Cairo", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-label-md {
+  font-family: "Cairo", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+/* Additional spacing utilities for FAQ */
+.py-stack-lg {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.md\:py-margin-desktop {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.mb-margin-desktop {
+  margin-bottom: 48px;
+}
+
+.space-y-stack-lg {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(24px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(24px * var(--tw-space-y-reverse));
+}
+
+.mb-stack-sm {
+  margin-bottom: 8px;
+}
+
+.mb-stack-md {
+  margin-bottom: 16px;
+}
+
+.border-b-outline-variant\/50 {
+  border-bottom-color: rgba(197, 198, 207, 0.5);
+}
+
+.pb-2 {
+  padding-bottom: 8px;
+}
+
+.px-margin-mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.md\:px-margin-desktop {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.pt-\[88px\] {
+  padding-top: 88px;
+}
+
+/* Font size utilities matching HTML template */
+.text-label-sm {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.font-label-sm {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.font-numeric-data {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.font-display-lg-mobile {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.font-display-lg {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* Spacing utilities matching HTML template */
+.space-y-stack-md {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(16px * var(--tw-space-y-reverse));
+}
+
+.p-stack-lg {
+  padding: 24px;
+}
+
+.gap-stack-sm {
+  gap: 8px;
+}
+
+.mb-stack-sm {
+  margin-bottom: 8px;
+}
+
+.mb-stack-md {
+  margin-bottom: 16px;
+}
+
+.pt-stack-sm {
+  padding-top: 8px;
+}
+
+.pb-stack-sm {
+  padding-bottom: 8px;
+}
+
+.border-t-outline-variant\/30 {
+  border-top-color: rgba(197, 198, 207, 0.3);
+}
+
+.border-b-outline-variant\/30 {
+  border-bottom-color: rgba(197, 198, 207, 0.3);
+}
+
+.pt-stack-lg {
+  padding-top: 24px;
+}
+
+.py-stack-lg {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.gap-stack-lg {
+  gap: 24px;
+}
+
+.border-t-outline-variant\/20 {
+  border-top-color: rgba(197, 198, 207, 0.2);
+}
+
+.border-outline-variant\/20 {
+  border-color: rgba(197, 198, 207, 0.2);
+}
+
+.shadow-\[0px_4px_20px_rgba\(0,18,51,0\.03\)\] {
+  box-shadow: 0px 4px 20px rgba(0, 18, 51, 0.03);
+}
+
+.shadow-\[0px_20px_40px_rgba\(0,18,51,0\.08\)\] {
+  box-shadow: 0px 20px 40px rgba(0, 18, 51, 0.08);
+}
+
+.text-surface {
+  color: #f9f9f6;
+}
+
+.border-navy {
+  border-color: #001233;
+}
+
+.border-secondary-container {
+  border-color: #fdce5e;
+}
+
+.border-outline {
+  border-color: #75777f;
+}
+
+.text-secondary-container {
+  color: #fdce5e;
+}
+
+.text-outline {
+  color: #75777f;
+}
+
+.gap-stack-sm {
+  gap: 8px;
+}
+
+.text-on-surface {
+  color: #1a1c1b;
+}
+
+.text-label-sm {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.font-label-sm {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.font-display-lg-mobile {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.font-display-lg {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.font-numeric-data {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   ألوان الوضع الليلي (Dark Mode) بناءً على التصميم
+========================================== */
+/* ==========================================
+   ألوان الوضع الليلي (Dark Mode) - Premium Fintech
+========================================== */
+/* ==========================================
+   ألوان الوضع الليلي (Dark Mode) - High Contrast & Premium
+========================================== */
+.dark {
+  /* 1. Backgrounds & Hierarchy (تسلسل الخلفيات) */
+  --color-background: #000814;              /* Main Background */
+  --color-surface-bright: #00101F;          /* Section Background */
+  --color-surface-container-low: #00101F;   /* Section Background */
+  --color-surface: #00152B;                 /* Card / Surface */
+  --color-surface-container: #00152B;       /* Card / Surface */
+  --color-surface-container-high: #001D38;  /* Elevated Card */
+  
+  /* 2. Typography & Contrast (نصوص واضحة ومقروءة) */
+  --color-on-background: #F8F8F5;           /* Primary Text (Main Headings) */
+  --color-on-surface: #F8F8F5;              /* Primary Text (Card Titles) */
+  --color-on-surface-variant: #C5CBD5;      /* Body Text (Card Descriptions) */
+  --color-inactive-gray: #8C96A8;           /* Placeholder / Disabled Text */
+  
+  /* 3. Borders & Dividers (حدود ظاهرة ولكن غير مزعجة) */
+  --color-outline-variant: #263650;         /* Visible but subtle border */
+  --color-outline: #263650; 
+  
+  /* 4. Brand & Gold Accents (الألوان الأساسية والذهبي) */
+  --color-primary: #F8F8F5;                 /* Main Text fallback */
+  --color-secondary: #E5B84A;               /* Gold Accent (Active Nav, Icons, Numbers) */
+  --color-secondary-container: #F0C75E;     /* Gold Hover / Highlight */
+  --color-on-secondary: #001233;            /* CTA Text (Dark Navy on Gold) */
+}
+
+/* ==========================================
+   تخصيص العناصر في الوضع الليلي (Dark Mode Specifics)
+========================================== */
+
+/* 1. تخصيص زر "ابدأ الآن" (CTA Button) لتوضيح الرؤية */
+.dark .btn-primary,
+.dark a[href="#download"] {
+  background-color: var(--color-secondary) !important; /* #E5B84A */
+  color: #001233 !important; /* Dark Navy Text */
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.dark .btn-primary:hover,
+.dark a[href="#download"]:hover {
+  background-color: var(--color-secondary-container) !important; /* #F0C75E */
+}
+
+/* 2. تخصيص البطاقات (Cards) */
+.dark .card-surface {
+  background-color: var(--color-surface); /* #00152B */
+  border: 1px solid var(--color-outline-variant); /* #263650 */
+}
+
+/* 3. تخصيص شريط التنقل (Navbar) */
+.dark nav#main-nav {
+  background-color: rgba(0, 8, 20, 0.95); /* #000814 with blur */
+  border-bottom: 1px solid var(--color-outline-variant); /* #263650 */
+}
+
+/* نصوص الـ Navbar الأساسية */
+.dark nav#main-nav a:not(.btn-primary) {
+  color: #F8F8F5; /* #F8F8F5 Navigation text */
+}
+
+/* العنصر النشط (Active Navigation Item) والـ Hover */
+.dark nav#main-nav a.text-secondary,
+.dark nav#main-nav a:not(.btn-primary):hover {
+  color: var(--color-secondary) !important; /* #E5B84A */
+}
+
+/* 4. فئات إضافية للنصوص (Tailwind Utility Classes) لتستخدميها في الـ JSX مباشرة */
+.dark .text-secondary-txt { color: #D5DAE2; } /* Secondary text */
+.dark .text-body-txt { color: #C5CBD5; }      /* Body text */
+.dark .text-muted-txt { color: #AAB3C2; }     /* Muted text */
+/* ==========================================
+   🚨 URGENT CONTRAST & VISIBILITY FIX 🚨
+========================================== */
+
+/* --- 1. DARK MODE GLOBAL TEXT (Dark Background -> Light Text) --- */
+.dark body {
+  background-color: #000814 !important;
+  color: #D5DAE2 !important; /* Body text fallback */
+}
+
+/* Force headings and titles to be pure visible white/off-white */
+.dark h1, .dark h2, .dark .font-display-lg, .dark .font-headline-xl, .dark .font-headline-lg, .dark .font-headline-md {
+  color: #F8F8F5 !important;
+  opacity: 1 !important; /* NO OPACITY */
+}
+
+/* Force secondary headings to Gold */
+.dark h3, .dark h4, .dark .text-secondary {
+  color: #E5B84A !important;
+  opacity: 1 !important;
+}
+
+/* Force readable body text */
+.dark p, .dark .font-body-lg, .dark .font-body-md {
+  color: #D5DAE2 !important;
+  opacity: 1 !important;
+}
+
+/* Force secondary and muted text (No dark gray!) */
+.dark .text-on-surface-variant {
+  color: #C5CBD5 !important;
+  opacity: 1 !important;
+}
+.dark .text-muted, .dark .font-label-sm, .dark .font-label-lg {
+  color: #AAB3C2 !important;
+  opacity: 1 !important;
+}
+
+/* --- 2. WHITE CARDS FIX (Light Background -> Dark Text) --- */
+/* Target ANY white background (like Privacy Policy cards) to strictly use Dark Navy text */
+.bg-white, 
+.bg-[#FFFFFF],
+.bg-surface:not(.dark .bg-surface) {
+  background-color: #FFFFFF !important;
+  color: #263650 !important; /* Card body text */
+}
+
+/* Headings inside white cards */
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.bg-white .font-headline-xl, .bg-white .font-headline-lg, .bg-white .font-headline-md {
+  color: #001233 !important; /* Card headings */
+  opacity: 1 !important;
+}
+
+/* Paragraphs and lists inside white cards */
+.bg-white p, .bg-white li {
+  color: #263650 !important;
+  opacity: 1 !important;
+}
+
+/* Secondary text inside white cards */
+.bg-white .text-on-surface-variant, .bg-white .text-muted {
+  color: #40516A !important;
+  opacity: 1 !important;
+}
+
+/* Important/Bold text inside white cards */
+.bg-white b, .bg-white strong {
+  color: #001233 !important;
+  opacity: 1 !important;
+}
+
+/* --- 3. "ابدأ الآن" CTA BUTTON --- */
+.btn-primary,
+a[href="#download"] {
+  background-color: #E5B84A !important;
+  color: #001233 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  border: none !important;
+}
+
+/* --- 4. NAVBAR FIX --- */
+.dark nav#main-nav {
+  background-color: #000814 !important;
+}
+
+.dark nav#main-nav a:not(.btn-primary) {
+  color: #F8F8F5 !important;
+  opacity: 1 !important;
+}
+
+.dark nav#main-nav a.text-secondary,
+.dark nav#main-nav a:not(.btn-primary):hover {
+  color: #E5B84A !important;
+  opacity: 1 !important;
+}
+/* ==========================================
+   🚨 CRITICAL READABILITY & CONTRAST FIX 🚨
+   Forcing solid colors and removing all opacity
+========================================== */
+
+/* 1. GLOBAL OPACITY RESET FOR ALL TEXT */
+h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div {
+  opacity: 1 !important;
+}
+
+/* ==========================================
+   2. WHITE CARDS (Privacy Policy Body Content)
+========================================== */
+.bg-white, 
+.bg-[#FFFFFF], 
+.card-surface, 
+.bg-surface:not(.dark .bg-surface) {
+  background-color: #FFFFFF !important;
+}
+
+/* Force Body/Paragraph Text inside White Cards to Dark Navy */
+.bg-white p, .bg-[#FFFFFF] p, .card-surface p,
+.bg-white li, .bg-[#FFFFFF] li, .card-surface li,
+.bg-white .font-body-md, .bg-white .font-body-lg,
+.card-surface .font-body-md, .card-surface .font-body-lg {
+  color: #001233 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+/* Force Headings inside White Cards */
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.card-surface h1, .card-surface h2, .card-surface h3, .card-surface h4, .card-surface h5, .card-surface h6 {
+  color: #001233 !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+}
+
+/* Secondary Text inside White Cards */
+.bg-white .text-on-surface-variant, .bg-white .text-muted,
+.card-surface .text-on-surface-variant, .card-surface .text-muted {
+  color: #263650 !important;
+  opacity: 1 !important;
+}
+
+/* Links and Important Text inside White Cards */
+.bg-white a:not(.btn-primary), .card-surface a:not(.btn-primary),
+.bg-white strong, .card-surface strong,
+.bg-white b, .card-surface b {
+  color: #001233 !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================
+   3. DARK BACKGROUNDS (Main Page & Headers)
+========================================== */
+.dark body {
+  background-color: #000814 !important;
+}
+
+/* Main Headings (Like "سياسة الخصوصية") directly on Dark Backgrounds */
+.dark h1, .dark .font-display-lg, .dark .font-headline-xl,
+.bg-[#000814] h1, .bg-[#000814] h2 {
+  color: #F8F8F5 !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+}
+
+/* Body Text directly on Dark Backgrounds */
+.dark p:not(.bg-white p):not(.card-surface p), 
+.dark li:not(.bg-white li):not(.card-surface li) {
+  color: #F8F8F5 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+/* Secondary Text directly on Dark Backgrounds */
+.dark .text-on-surface-variant:not(.bg-white .text-on-surface-variant):not(.card-surface .text-on-surface-variant) {
+  color: #D5DAE2 !important;
+  opacity: 1 !important;
+}
+
+/* ==========================================
+   4. PROTECT GOLD ACCENTS & CTA BUTTONS
+========================================== */
+.text-gold, .text-[#E5B84A], .text-secondary {
+  color: #E5B84A !important;
+  opacity: 1 !important;
+}
+
+.btn-primary, a[href="#download"] {
+  background-color: #E5B84A !important;
+  color: #001233 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
