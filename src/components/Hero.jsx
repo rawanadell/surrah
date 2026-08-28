@@ -1,6 +1,8 @@
 import screen1 from '../assets/screen1-account.jpg'
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
+// إضافة استدعاء Link
+import { Link } from 'react-router-dom'
 
 function Hero() {
   // 2. تهيئة أداة الترجمة
@@ -39,9 +41,10 @@ function Hero() {
               <span className="material-symbols-outlined">download</span>
               {t('hero_download_btn')}
             </a>
-            <a className="bg-transparent text-primary px-8 py-4 rounded-[16px] text-sm font-medium border border-outline-variant/50 hover:border-primary hover:bg-surface-container transition-all" href="/features">
+            {/* التعديل تم هنا: استخدام Link لزرار المميزات */}
+            <Link className="bg-transparent text-primary px-8 py-4 rounded-[16px] text-sm font-medium border border-outline-variant/50 hover:border-primary hover:bg-surface-container transition-all" to="/features">
               {t('hero_features_btn')}
-            </a>
+            </Link>
           </div>
         </div>
 

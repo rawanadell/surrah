@@ -1,6 +1,8 @@
 import { useState } from 'react'
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
+// إضافة استدعاء Link من React Router
+import { Link } from 'react-router-dom'
 
 function FAQ() {
   // 2. تهيئة الترجمة
@@ -179,10 +181,11 @@ function FAQ() {
           <p className="font-body-md-manrope text-body-md-manrope text-on-primary-container/80 mb-6 max-w-md">
             {t('faq_support_desc')}
           </p>
-          <a className="inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary px-8 py-3 rounded-xl font-label-lg-manrope text-label-lg-manrope hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-md" href="/contact">
+          {/* التعديل تم هنا: استخدام Link بدلاً من a */}
+          <Link className="inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary px-8 py-3 rounded-xl font-label-lg-manrope text-label-lg-manrope hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-md" to="/contact">
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span>
             {t('contact_us_btn')}
-          </a>
+          </Link>
         </div>
       </div>
     </div>
