@@ -17,7 +17,8 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    // التعديل تم هنا: إضافة basename
+    <Router basename="/surrah">
       <div className="min-h-screen bg-surface">
         <Navbar />
         
