@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { t, i18n } = useTranslation()
-
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
   const location = useLocation()
 
@@ -50,6 +50,10 @@ function Navbar() {
     
     document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = newLang;
+  }
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
   };
 
   return (
@@ -123,12 +127,64 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <button 
             aria-label="Menu" 
+            onClick={toggleMobileMenu}
             className="md:hidden p-2 text-on-surface"
           >
-            <span className="material-symbols-outlined">menu</span>
+            <span className="material-symbols-outlined">
+              {mobileMenuOpen ? 'close' : 'menu'}
+            </span>
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-surface border-b border-outline-variant/30 shadow-lg">
+          <div className="px-5 py-4 space-y-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.id}
+                to={link.path}
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                }}
+                className={`block py-2 px-3 rounded-lg transition-all ${
+                  location.pathname === link.path
+                    ? 'bg-secondary/10 text-secondary font-bold'
+                    : 'text-on-surface-variant hover:bg-surface-container-low'
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="flex items-center gap-2 pt-2 border-t border-outline-variant/30">
+              <button 
+                aria-label="Toggle Dark Mode" 
+                onClick={toggleTheme}
+                className="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all"
+              >
+                <span className="material-symbols-outlined">
+                  {theme === 'light' ? 'dark_mode' : 'light_mode'}
+                </span>
+              </button>
+              <button 
+                aria-label="Language" 
+                onClick={toggleLanguage}
+                className="p-2 flex items-center gap-1 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all font-bold text-sm"
+              >
+                <span className="material-symbols-outlined">language</span>
+                <span>{i18n.language === 'ar' ? 'EN' : 'AR'}</span>
+              </button>
+            </div>
+            <a 
+              className="block w-full bg-primary text-on-primary px-6 py-2.5 rounded-lg text-sm font-medium hover:shadow-lg active:scale-[0.98] transition-all text-center mt-2" 
+              href="#download"
+            >
+              {t('start_now')}
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
