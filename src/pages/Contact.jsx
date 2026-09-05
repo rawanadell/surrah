@@ -55,7 +55,7 @@ function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           {/* Contact Info Sidebar */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] border border-outline-variant/30 relative overflow-hidden">
+            <div className="bg-surface-container-lowest p-6 rounded-[16px] shadow-card-light border border-outline-variant/30 relative overflow-hidden">
               <div className="absolute top-0 rtl:left-0 ltr:right-0 w-full h-1 bg-gradient-to-r from-secondary to-secondary-fixed"></div>
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
@@ -69,7 +69,7 @@ function Contact() {
               <a className="font-label-lg-manrope text-label-lg-manrope text-primary hover:text-secondary transition-colors block rtl:text-right ltr:text-left" href="mailto:support@example.com">support@example.com</a>
             </div>
 
-            <div className="bg-surface-container-lowest p-6 rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] border border-outline-variant/30">
+            <div className="bg-surface-container-lowest p-6 rounded-[16px] shadow-card-light border border-outline-variant/30">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
                   <span className="material-symbols-outlined">location_on</span>
@@ -90,7 +90,7 @@ function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-8 bg-surface-container-lowest p-6 md:p-12 rounded-[16px] shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-outline-variant/20 relative">
+          <div className="lg:col-span-8 bg-surface-container-lowest p-6 md:p-12 rounded-[16px] shadow-card-medium border border-outline-variant/20 relative">
             {/* Success State Overlay */}
             {formSubmitted && (
               <div className="absolute inset-0 bg-surface-container-lowest/95 backdrop-blur-sm z-10 flex flex-col items-center justify-center rounded-[16px]">

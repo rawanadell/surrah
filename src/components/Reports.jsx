@@ -22,7 +22,7 @@ function ReportsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
           
           {/* Daily / Weekly Summary */}
-          <div className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-[0px_4px_20px_rgba(0,18,51,0.03)] flex flex-col gap-4 relative overflow-hidden group">
+          <div className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-navy-card flex flex-col gap-4 relative overflow-hidden group">
             {/* تم ضبط الخط ليكون يميناً في العربي ويساراً في الإنجليزي */}
             <div className="absolute rtl:right-0 ltr:left-0 top-0 bottom-0 w-1 bg-gold"></div>
             
@@ -56,7 +56,7 @@ function ReportsSection() {
           </div>
 
           {/* Comparison Chart */}
-          <div className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-[0px_4px_20px_rgba(0,18,51,0.03)] flex flex-col gap-4 relative overflow-hidden group">
+          <div className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-navy-card flex flex-col gap-4 relative overflow-hidden group">
             <div className="absolute rtl:right-0 ltr:left-0 top-0 bottom-0 w-1 bg-navy"></div>
             
             <div className="flex justify-between items-center mb-2">
@@ -96,7 +96,7 @@ function ReportsSection() {
           </div>
 
           {/* Category Analysis */}
-          <div className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-[0px_4px_20px_rgba(0,18,51,0.03)] md:col-span-2 relative overflow-hidden">
+          <div className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-navy-card md:col-span-2 relative overflow-hidden">
             <div className="absolute rtl:right-0 ltr:left-0 top-0 bottom-0 w-1 bg-gold"></div>
             
             <h3 className="text-xl font-semibold text-navy mb-6">{t('reports_where_money_goes')}</h3>
@@ -148,7 +148,7 @@ function ReportsSection() {
           </div>
 
           {/* Monthly Large Mockup */}
-          <div className="md:col-span-2 mt-6 rounded-2xl overflow-hidden shadow-[0px_20px_40px_rgba(0,18,51,0.08)] border border-outline-variant/20 bg-surface">
+          <div className="md:col-span-2 mt-6 rounded-2xl overflow-hidden shadow-navy-large border border-outline-variant/20 bg-surface">
             <img 
               alt="A highly detailed mockup of a premium digital financial dashboard displayed on a large screen or tablet." 
               className="w-full h-auto object-cover" 

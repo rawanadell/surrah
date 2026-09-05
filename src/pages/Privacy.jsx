@@ -24,7 +24,7 @@ function Privacy() {
       <div className="flex-grow px-5 md:px-12 max-w-[1000px] mx-auto mb-12">
         <div className="grid grid-cols-1 gap-6">
           {/* Section 1 */}
-          <section className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20 relative overflow-hidden group">
+          <section className="bg-surface-container-lowest p-8 rounded-xl shadow-card-light border border-outline-variant/20 relative overflow-hidden group">
             {/* تعديل الخط الجانبي للاتجاهين */}
             <div className="absolute top-0 rtl:right-0 ltr:left-0 w-2 h-full bg-secondary"></div>
             <h2 className="font-headline-md text-headline-md text-primary-container mb-6 flex items-center gap-3">
@@ -38,7 +38,7 @@ function Privacy() {
 
           {/* Section 2 & 3: Data Collection & Storage */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20 relative">
+            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-card-light border border-outline-variant/20 relative">
               {/* تعديل تدرج الألوان (Gradient) للاتجاهين */}
               <div className="absolute top-0 rtl:right-0 ltr:left-0 w-full h-1 rtl:bg-gradient-to-l ltr:bg-gradient-to-r from-secondary to-transparent"></div>
               <h2 className="font-headline-md text-headline-md text-primary-container mb-6 flex items-center gap-3">
@@ -50,7 +50,7 @@ function Privacy() {
               </p>
             </section>
 
-            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20 relative">
+            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-card-light border border-outline-variant/20 relative">
               <div className="absolute top-0 rtl:right-0 ltr:left-0 w-full h-1 rtl:bg-gradient-to-l ltr:bg-gradient-to-r from-secondary to-transparent"></div>
               <h2 className="font-headline-md text-headline-md text-primary-container mb-6 flex items-center gap-3">
                 <span className="material-symbols-outlined text-secondary">save</span>
@@ -64,7 +64,7 @@ function Privacy() {
 
           {/* Section 4 & 5: Usage & Sharing */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20">
+            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-card-light border border-outline-variant/20">
               <h2 className="font-headline-md text-headline-md text-primary-container mb-6 flex items-center gap-3">
                 <span className="material-symbols-outlined text-secondary">analytics</span>
                 {t('privacy_sec4_title')}
@@ -74,7 +74,7 @@ function Privacy() {
               </p>
             </section>
 
-            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20">
+            <section className="bg-surface-container-lowest p-8 rounded-xl shadow-card-light border border-outline-variant/20">
               <h2 className="font-headline-md text-headline-md text-primary-container mb-6 flex items-center gap-3">
                 <span className="material-symbols-outlined text-secondary">share_off</span>
                 {t('privacy_sec5_title')}
@@ -86,7 +86,7 @@ function Privacy() {
           </div>
 
           {/* Section 6: Security */}
-          <section className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20 relative">
+          <section className="bg-surface-container-lowest p-8 rounded-xl shadow-card-light border border-outline-variant/20 relative">
             {/* تعديل الخط الجانبي الأيسر/الأيمن */}
             <div className="absolute rtl:left-0 ltr:right-0 top-0 bottom-0 w-1 bg-secondary"></div>
             <h2 className="font-headline-md text-headline-md text-primary-container mb-6 flex items-center gap-3">
@@ -100,7 +100,7 @@ function Privacy() {
 
           {/* Section 7, 8, 9 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <section className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20">
+            <section className="bg-surface-container-lowest p-6 rounded-xl shadow-card-light border border-outline-variant/20">
               <h2 className="font-headline-md text-headline-md text-primary-container mb-4 flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary">delete</span>
                 {t('privacy_sec7_title')}
@@ -110,7 +110,7 @@ function Privacy() {
               </p>
             </section>
 
-            <section className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20">
+            <section className="bg-surface-container-lowest p-6 rounded-xl shadow-card-light border border-outline-variant/20">
               <h2 className="font-headline-md text-headline-md text-primary-container mb-4 flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary">child_care</span>
                 {t('privacy_sec8_title')}
@@ -120,7 +120,7 @@ function Privacy() {
               </p>
             </section>
 
-            <section className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_4px_24px_rgba(7,26,59,0.05)] border border-outline-variant/20">
+            <section className="bg-surface-container-lowest p-6 rounded-xl shadow-card-light border border-outline-variant/20">
               <h2 className="font-headline-md text-headline-md text-primary-container mb-4 flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary">update</span>
                 {t('privacy_sec9_title')}

@@ -341,11 +341,11 @@ body {
   border-color: rgba(197, 198, 207, 0.2);
 }
 
-.shadow-\[0_4px_24px_rgba\(0,0,0,0\.02\)\] {
+.shadow-card-light {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
 }
 
-.shadow-\[0_8px_32px_rgba\(0,0,0,0\.04\)\] {
+.shadow-card-medium {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
 }
 
@@ -603,8 +603,16 @@ body {
   border-color: rgba(197, 198, 207, 0.2);
 }
 
-.shadow-\[0px_4px_20px_rgba\(0,18,51,0\.03\)\] {
+.shadow-navy-card {
   box-shadow: 0px 4px 20px rgba(0, 18, 51, 0.03);
+}
+
+.shadow-navy-large {
+  box-shadow: 0px 20px 40px rgba(0, 18, 51, 0.08);
+}
+
+.shadow-navy-extra {
+  box-shadow: 0px 20px 40px rgba(0, 18, 51, 0.12);
 }
 
 .shadow-\[0px_20px_40px_rgba\(0,18,51,0\.08\)\] {
@@ -693,219 +701,84 @@ body {
 }
 
 /* ==========================================
-   ألوان الوضع الليلي (Dark Mode) بناءً على التصميم
-========================================== */
-/* ==========================================
-   ألوان الوضع الليلي (Dark Mode) - Premium Fintech
-========================================== */
-/* ==========================================
-   ألوان الوضع الليلي (Dark Mode) - High Contrast & Premium
+   ألوان الوضع الليلي (Dark Mode)
 ========================================== */
 .dark {
-  /* 1. Backgrounds & Hierarchy (تسلسل الخلفيات) */
-  --color-background: #000814;              /* Main Background */
-  --color-surface-bright: #00101F;          /* Section Background */
-  --color-surface-container-low: #00101F;   /* Section Background */
-  --color-surface: #00152B;                 /* Card / Surface */
-  --color-surface-container: #00152B;       /* Card / Surface */
-  --color-surface-container-high: #001D38;  /* Elevated Card */
+  /* Backgrounds */
+  --color-background: #000814;
+  --color-surface: #00152B;
+  --color-surface-container: #00152B;
+  --color-surface-container-low: #00101F;
+  --color-surface-container-high: #001D38;
   
-  /* 2. Typography & Contrast (نصوص واضحة ومقروءة) */
-  --color-on-background: #F8F8F5;           /* Primary Text (Main Headings) */
-  --color-on-surface: #F8F8F5;              /* Primary Text (Card Titles) */
-  --color-on-surface-variant: #C5CBD5;      /* Body Text (Card Descriptions) */
-  --color-inactive-gray: #8C96A8;           /* Placeholder / Disabled Text */
+  /* Typography */
+  --color-on-background: #F8F8F5;
+  --color-on-surface: #F8F8F5;
+  --color-on-surface-variant: #C5CBD5;
+  --color-primary: #F8F8F5;
   
-  /* 3. Borders & Dividers (حدود ظاهرة ولكن غير مزعجة) */
-  --color-outline-variant: #263650;         /* Visible but subtle border */
-  --color-outline: #263650; 
+  /* Brand Colors */
+  --color-secondary: #E5B84A;
+  --color-secondary-container: #F0C75E;
+  --color-on-secondary: #001233;
   
-  /* 4. Brand & Gold Accents (الألوان الأساسية والذهبي) */
-  --color-primary: #F8F8F5;                 /* Main Text fallback */
-  --color-secondary: #E5B84A;               /* Gold Accent (Active Nav, Icons, Numbers) */
-  --color-secondary-container: #F0C75E;     /* Gold Hover / Highlight */
-  --color-on-secondary: #001233;            /* CTA Text (Dark Navy on Gold) */
+  /* Borders */
+  --color-outline-variant: #263650;
+  --color-outline: #263650;
 }
 
-/* ==========================================
-   تخصيص العناصر في الوضع الليلي (Dark Mode Specifics)
-========================================== */
+/* Dark Mode Specific Styles */
+.dark body {
+  background-color: #000814;
+  color: #F8F8F5;
+}
 
-/* 1. تخصيص زر "ابدأ الآن" (CTA Button) لتوضيح الرؤية */
+.dark nav#main-nav {
+  background-color: rgba(0, 8, 20, 0.95);
+  border-bottom: 1px solid #263650;
+}
+
+.dark nav#main-nav a:not(.btn-primary) {
+  color: #F8F8F5;
+}
+
+.dark nav#main-nav a.text-secondary,
+.dark nav#main-nav a:not(.btn-primary):hover {
+  color: #E5B84A;
+}
+
+.dark .card-surface {
+  background-color: #00152B;
+  border: 1px solid #263650;
+  color: #F8F8F5;
+}
+
 .dark .btn-primary,
 .dark a[href="#download"] {
-  background-color: var(--color-secondary) !important; /* #E5B84A */
-  color: #001233 !important; /* Dark Navy Text */
-  font-weight: 600;
-  border: none;
-  transition: background-color 0.2s ease;
+  background-color: #E5B84A;
+  color: #001233;
 }
 
 .dark .btn-primary:hover,
 .dark a[href="#download"]:hover {
-  background-color: var(--color-secondary-container) !important; /* #F0C75E */
+  background-color: #F0C75E;
 }
 
-/* 2. تخصيص البطاقات (Cards) */
-.dark .card-surface {
-  background-color: var(--color-surface); /* #00152B */
-  border: 1px solid var(--color-outline-variant); /* #263650 */
+/* Dark Mode Text Colors */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #F8F8F5;
 }
 
-/* 3. تخصيص شريط التنقل (Navbar) */
-.dark nav#main-nav {
-  background-color: rgba(0, 8, 20, 0.95); /* #000814 with blur */
-  border-bottom: 1px solid var(--color-outline-variant); /* #263650 */
+.dark p, .dark li {
+  color: #C5CBD5;
 }
 
-/* نصوص الـ Navbar الأساسية */
-.dark nav#main-nav a:not(.btn-primary) {
-  color: #F8F8F5; /* #F8F8F5 Navigation text */
-}
-
-/* العنصر النشط (Active Navigation Item) والـ Hover */
-.dark nav#main-nav a.text-secondary,
-.dark nav#main-nav a:not(.btn-primary):hover {
-  color: var(--color-secondary) !important; /* #E5B84A */
-}
-
-/* 4. فئات إضافية للنصوص (Tailwind Utility Classes) لتستخدميها في الـ JSX مباشرة */
-.dark .text-secondary-txt { color: #D5DAE2; } /* Secondary text */
-.dark .text-body-txt { color: #C5CBD5; }      /* Body text */
-.dark .text-muted-txt { color: #AAB3C2; }     /* Muted text */
-/* ==========================================
-   🚨 URGENT CONTRAST & VISIBILITY FIX 🚨
-========================================== */
-
-/* --- 1. DARK MODE GLOBAL TEXT (Dark Background -> Light Text) --- */
-.dark body {
-  background-color: #000814 !important;
-  color: #D5DAE2 !important; /* Body text fallback */
-}
-
-/* Force headings and titles to be pure visible white/off-white */
-.dark h1, .dark h2, .dark .font-display-lg, .dark .font-headline-xl, .dark .font-headline-lg, .dark .font-headline-md {
-  color: #F8F8F5 !important;
-  opacity: 1 !important; /* NO OPACITY */
-}
-
-/* Force secondary headings to Gold */
-.dark h3, .dark h4, .dark .text-secondary {
-  color: #E5B84A !important;
-  opacity: 1 !important;
-}
-
-/* Force readable body text */
-.dark p, .dark .font-body-lg, .dark .font-body-md {
-  color: #D5DAE2 !important;
-  opacity: 1 !important;
-}
-
-/* Force secondary and muted text (No dark gray!) */
 .dark .text-on-surface-variant {
-  color: #C5CBD5 !important;
-  opacity: 1 !important;
-}
-.dark .text-muted, .dark .font-label-sm, .dark .font-label-lg {
-  color: #AAB3C2 !important;
-  opacity: 1 !important;
+  color: #C5CBD5;
 }
 
-/* --- 2. WHITE CARDS FIX (Light Background -> Dark Text) --- */
-/* Target ANY white background (like Privacy Policy cards) to strictly use Dark Navy text */
-.bg-white, 
-.bg-[#FFFFFF],
-.bg-surface:not(.dark .bg-surface) {
-  background-color: #FFFFFF !important;
-  color: #263650 !important; /* Card body text */
-}
-
-/* Headings inside white cards */
-.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
-.bg-white .font-headline-xl, .bg-white .font-headline-lg, .bg-white .font-headline-md {
-  color: #001233 !important; /* Card headings */
-  opacity: 1 !important;
-}
-
-/* Paragraphs and lists inside white cards */
-.bg-white p, .bg-white li {
-  color: #263650 !important;
-  opacity: 1 !important;
-}
-
-/* Secondary text inside white cards */
-.bg-white .text-on-surface-variant, .bg-white .text-muted {
-  color: #40516A !important;
-  opacity: 1 !important;
-}
-
-/* Important/Bold text inside white cards */
-.bg-white b, .bg-white strong {
-  color: #001233 !important;
-  opacity: 1 !important;
-}
-
-/* --- 3. "ابدأ الآن" CTA BUTTON --- */
-.btn-primary,
-a[href="#download"] {
-  background-color: #E5B84A !important;
-  color: #001233 !important;
-  font-weight: 700 !important;
-  opacity: 1 !important;
-  border: none !important;
-}
-
-/* --- 4. NAVBAR FIX --- */
-.dark nav#main-nav {
-  background-color: #000814 !important;
-}
-
-.dark nav#main-nav a:not(.btn-primary) {
-  color: #F8F8F5 !important;
-  opacity: 1 !important;
-}
-
-.dark nav#main-nav a.text-secondary,
-.dark nav#main-nav a:not(.btn-primary):hover {
-  color: #E5B84A !important;
-  opacity: 1 !important;
-}
-/* ==========================================
-   🚨 CRITICAL READABILITY & CONTRAST FIX 🚨
-   Forcing solid colors and removing all opacity
-========================================== */
-
-/* 1. GLOBAL OPACITY RESET FOR ALL TEXT */
-h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div {
-  opacity: 1 !important;
-}
-
-/* ==========================================
-   2. WHITE CARDS (Privacy Policy Body Content)
-========================================== */
-.bg-white, 
-.bg-[#FFFFFF], 
-.card-surface, 
-.bg-surface:not(.dark .bg-surface) {
-  background-color: #FFFFFF !important;
-}
-
-/* Force Body/Paragraph Text inside White Cards to Dark Navy */
-.bg-white p, .bg-[#FFFFFF] p, .card-surface p,
-.bg-white li, .bg-[#FFFFFF] li, .card-surface li,
-.bg-white .font-body-md, .bg-white .font-body-lg,
-.card-surface .font-body-md, .card-surface .font-body-lg {
-  color: #001233 !important;
-  opacity: 1 !important;
-  font-weight: 500 !important;
-}
-
-/* Force Headings inside White Cards */
-.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
-.card-surface h1, .card-surface h2, .card-surface h3, .card-surface h4, .card-surface h5, .card-surface h6 {
-  color: #001233 !important;
-  opacity: 1 !important;
-  font-weight: 700 !important;
+.dark .text-secondary {
+  color: #E5B84A;
 }
 
 /* Secondary Text inside White Cards */

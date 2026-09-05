@@ -35,7 +35,7 @@ function HowItWorksSection() {
             </div>
             
             {/* Mockup visual area - تم ضبط الهوامش لدعم الاتجاهين */}
-            <div className="mt-8 rtl:md:-mr-12 ltr:md:-ml-12 md:-mb-12 relative w-full h-[300px] md:h-[400px] rtl:rounded-tl-xl ltr:rounded-tr-xl overflow-hidden shadow-[0_20px_40px_rgba(0,18,51,0.12)] border border-outline-variant/20">
+            <div className="mt-8 rtl:md:-mr-12 ltr:md:-ml-12 md:-mb-12 relative w-full h-[300px] md:h-[400px] rtl:rounded-tl-xl ltr:rounded-tr-xl overflow-hidden shadow-navy-extra border border-outline-variant/20">
               <div className="absolute inset-0 bg-navy p-6 flex flex-col">
                 <div className="text-center text-white mb-6 text-xl font-semibold">{t('hiw_step1_mock_title')}</div>
                 <div className="bg-secondary-fixed-dim rounded-lg p-4 text-navy text-left ltr:text-right text-[24px] font-bold mb-6 flex justify-between flex-row-reverse">
@@ -115,7 +115,7 @@ function HowItWorksSection() {
               </ul>
             </div>
             
-            <div className="w-full md:w-1/2 relative rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(0,18,51,0.12)] bg-surface p-4 border border-outline-variant/20">
+            <div className="w-full md:w-1/2 relative rounded-xl overflow-hidden shadow-navy-extra bg-surface p-4 border border-outline-variant/20">
               <img 
                 alt="A clean, modern financial dashboard app mockup showing a bar chart comparing income and expenses over several months." 
                 className="w-full h-auto object-cover rounded-lg" 
