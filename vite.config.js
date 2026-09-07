@@ -9,4 +9,8 @@ export default defineConfig({
     tailwindcss(),
   ],
   base: '/surrah/',
+  test: {
+    environment: 'jsdom',
+    globals: true,
+  }
 })
