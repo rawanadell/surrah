@@ -8,7 +8,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/surrah/',
   test: {
     environment: 'jsdom',
     globals: true,
