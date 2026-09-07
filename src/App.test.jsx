@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect, beforeEach, vi } from 'vitest'; // <-- أضفنا vi هنا
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import '@testing-library/jest-dom'; 
 import App from './App';
 
@@ -13,7 +13,7 @@ vi.mock('react-i18next', () => ({
 describe('App Component in Surrah Project', () => {
   
   beforeEach(() => {
-    window.history.pushState({}, 'Test page', '/surrah');
+    window.history.pushState({}, 'Test page', '/');
   });
 
   it('renders the main page correctly', () => {
