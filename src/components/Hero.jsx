@@ -1,4 +1,4 @@
-import screen1 from '../assets/Starttt.png'
+import screen1 from '../assets/starttt.png'
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
 // إضافة استدعاء Link
