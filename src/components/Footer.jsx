@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-// 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next';
+import logo from '../assets/logo without background.png';
 
 function Footer() {
   const location = useLocation();
@@ -25,8 +25,7 @@ function Footer() {
         {/* Logo Section */}
         <div className="md:col-span-1">
           <Link className="inline-flex items-center gap-2 mb-6" to="/">
-            <span className="material-symbols-outlined text-secondary-fixed text-2xl">account_balance_wallet</span>
-            {/* 3. استبدال الكلمات الثابتة بالترجمة */}
+            <img src={logo} alt="Surrah logo" className="w-8 h-8 object-contain" />
             <span className="text-xl font-bold text-secondary-fixed tracking-tight">{t('app_name')}</span>
           </Link>
           <p className="text-on-tertiary-container/60 text-sm mb-6 leading-relaxed">

@@ -1,4 +1,4 @@
-import screen1 from '../assets/screen1-account.jpg'
+import screen1 from '../assets/Starttt.png'
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
 // إضافة استدعاء Link
@@ -41,7 +41,6 @@ function Hero() {
               <span className="material-symbols-outlined">download</span>
               {t('hero_download_btn')}
             </a>
-            {/* التعديل تم هنا: استخدام Link لزرار المميزات */}
             <Link className="bg-transparent text-primary px-8 py-4 rounded-[16px] text-sm font-medium border border-outline-variant/50 hover:border-primary hover:bg-surface-container transition-all" to="/features">
               {t('hero_features_btn')}
             </Link>
@@ -50,11 +49,11 @@ function Hero() {
 
         {/* Right: Single Screen */}
         <div className="relative z-10 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-md border border-secondary-fixed-dim bg-surface/60 backdrop-blur-3xl rounded-[40px] p-4 shadow-lg">
-            <div className="bg-surface rounded-[32px] overflow-hidden border border-outline-variant/20 shadow-inner flex flex-col h-[650px]">
+          <div className="relative w-full max-w-sm border border-secondary-fixed-dim bg-surface/60 backdrop-blur-3xl rounded-[40px] p-4 shadow-lg">
+            <div className="bg-surface rounded-[32px] border border-outline-variant/20 shadow-inner">
               <img 
                 alt={t('hero_image_alt')} 
-                className="w-full h-full object-cover rounded-[32px]" 
+                className="w-full h-auto object-contain rounded-[32px] block" 
                 src={screen1}
               />
             </div>

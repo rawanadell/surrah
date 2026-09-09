@@ -707,30 +707,38 @@ body {
   /* Backgrounds */
   --color-background: #000814;
   --color-surface: #00152B;
-  --color-surface-container: #00152B;
+  --color-surface-container: #001D38;
   --color-surface-container-low: #00101F;
-  --color-surface-container-high: #001D38;
-  
+  --color-surface-container-high: #002347;
+  --color-surface-container-lowest: #000C18;
+  --color-surface-container-highest: #002855;
+  --color-surface-bright: #001D38;
+  --color-surface-dim: #000814;
+  --color-surface-variant: #1a2d45;
+
   /* Typography */
   --color-on-background: #F8F8F5;
   --color-on-surface: #F8F8F5;
   --color-on-surface-variant: #C5CBD5;
   --color-primary: #F8F8F5;
-  
+
   /* Brand Colors */
   --color-secondary: #E5B84A;
   --color-secondary-container: #F0C75E;
+  --color-secondary-fixed: #E5B84A;
+  --color-secondary-fixed-dim: #E5B84A;
   --color-on-secondary: #001233;
-  
+  --color-on-secondary-container: #001233;
+
   /* Borders */
   --color-outline-variant: #263650;
-  --color-outline: #263650;
+  --color-outline: #4a6080;
 }
 
 /* Dark Mode Specific Styles */
 .dark body {
-  background-color: #000814;
-  color: #F8F8F5;
+  background-color: #000814 !important;
+  color: #F8F8F5 !important;
 }
 
 .dark nav#main-nav {
@@ -755,88 +763,89 @@ body {
 
 .dark .btn-primary,
 .dark a[href="#download"] {
-  background-color: #E5B84A;
-  color: #001233;
+  background-color: #E5B84A !important;
+  color: #001233 !important;
 }
 
-.dark .btn-primary:hover,
-.dark a[href="#download"]:hover {
-  background-color: #F0C75E;
-}
-
-/* Dark Mode Text Colors */
+/* ==========================================
+   Dark Mode Text — كل النصوص تبان واضحة
+========================================== */
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #F8F8F5 !important;
+}
+
+.dark p {
+  color: #C5CBD5 !important;
+}
+
+.dark li {
+  color: #C5CBD5 !important;
+}
+
+.dark span:not(.material-symbols-outlined):not(.gold-gradient-text):not(.text-gold):not(.text-secondary-fixed):not(.text-secondary-fixed-dim):not(.text-secondary):not([class*="bg-"]) {
+  color: inherit;
+}
+
+/* النصوص على الخلفيات الداكنة */
+.dark .text-primary { color: #F8F8F5 !important; }
+.dark .text-on-surface { color: #F8F8F5 !important; }
+.dark .text-on-surface-variant { color: #C5CBD5 !important; }
+.dark .text-on-primary-container { color: #C5CBD5 !important; }
+
+/* الكروت والأقسام */
+.dark .bg-surface-container,
+.dark .bg-surface-container-low,
+.dark .bg-surface-container-high,
+.dark .bg-surface-container-lowest,
+.dark .bg-surface-container-highest {
   color: #F8F8F5;
 }
 
-.dark p, .dark li {
-  color: #C5CBD5;
-}
+/* text-navy في الدارك مود يبقى أبيض */
+.dark .text-navy { color: #F8F8F5 !important; }
 
-.dark .text-on-surface-variant {
-  color: #C5CBD5;
-}
-
-.dark .text-secondary {
-  color: #E5B84A;
-}
-
-/* Secondary Text inside White Cards */
-.bg-white .text-on-surface-variant, .bg-white .text-muted,
-.card-surface .text-on-surface-variant, .card-surface .text-muted {
-  color: #263650 !important;
-  opacity: 1 !important;
-}
-
-/* Links and Important Text inside White Cards */
-.bg-white a:not(.btn-primary), .card-surface a:not(.btn-primary),
-.bg-white strong, .card-surface strong,
-.bg-white b, .card-surface b {
-  color: #001233 !important;
-  opacity: 1 !important;
-  font-weight: 700 !important;
-}
+/* bg-navy يفضل كحلي */
+.dark .bg-navy { background-color: #001233 !important; }
 
 /* ==========================================
-   3. DARK BACKGROUNDS (Main Page & Headers)
+   حماية الألوان الذهبية والأزرار
 ========================================== */
-.dark body {
-  background-color: #000814 !important;
-}
-
-/* Main Headings (Like "سياسة الخصوصية") directly on Dark Backgrounds */
-.dark h1, .dark .font-display-lg, .dark .font-headline-xl,
-.bg-[#000814] h1, .bg-[#000814] h2 {
-  color: #F8F8F5 !important;
-  opacity: 1 !important;
-  font-weight: 700 !important;
-}
-
-/* Body Text directly on Dark Backgrounds */
-.dark p:not(.bg-white p):not(.card-surface p), 
-.dark li:not(.bg-white li):not(.card-surface li) {
-  color: #F8F8F5 !important;
-  opacity: 1 !important;
-  font-weight: 500 !important;
-}
-
-/* Secondary Text directly on Dark Backgrounds */
-.dark .text-on-surface-variant:not(.bg-white .text-on-surface-variant):not(.card-surface .text-on-surface-variant) {
-  color: #D5DAE2 !important;
-  opacity: 1 !important;
-}
-
-/* ==========================================
-   4. PROTECT GOLD ACCENTS & CTA BUTTONS
-========================================== */
-.text-gold, .text-[#E5B84A], .text-secondary {
+.dark .text-gold,
+.dark .text-secondary,
+.dark .text-secondary-fixed,
+.dark .text-secondary-fixed-dim,
+.dark .gold-gradient-text {
   color: #E5B84A !important;
-  opacity: 1 !important;
 }
 
-.btn-primary, a[href="#download"] {
+.dark .btn-primary {
   background-color: #E5B84A !important;
   color: #001233 !important;
   font-weight: 700 !important;
-  opacity: 1 !important;
+}
+
+/* ==========================================
+   حماية النصوص داخل الكروت البيضاء
+========================================== */
+.bg-white .text-navy,
+.bg-white h1, .bg-white h2, .bg-white h3 {
+  color: #001233 !important;
+}
+
+.bg-white .text-on-surface-variant {
+  color: #44474e !important;
+}
+
+/* ==========================================
+   النصوص داخل الـ bg-navy تفضل بيضاء دايمًا
+========================================== */
+.bg-navy,
+.bg-navy * {
+  color: #F8F8F5;
+}
+
+.bg-navy .text-gold,
+.bg-navy .text-secondary-fixed,
+.bg-navy .text-secondary-fixed-dim {
+  color: #E5B84A !important;
 }

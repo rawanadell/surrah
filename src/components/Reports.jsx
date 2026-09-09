@@ -1,4 +1,4 @@
-import screen3Reports from '../assets/screen3-reports.png';
+import screen222 from '../assets/merged.png';
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next';
 
@@ -147,12 +147,12 @@ function ReportsSection() {
             </div>
           </div>
 
-          {/* Monthly Large Mockup */}
-          <div className="md:col-span-2 mt-6 rounded-2xl overflow-hidden shadow-navy-large border border-outline-variant/20 bg-surface">
-            <img 
-              alt="A highly detailed mockup of a premium digital financial dashboard displayed on a large screen or tablet." 
-              className="w-full h-auto object-cover" 
-              src={screen3Reports} 
+          {/* Mockup */}
+          <div className="md:col-span-2 mt-6 rounded-2xl shadow-navy-large border border-outline-variant/20 overflow-hidden w-full bg-surface-container-lowest" style={{ aspectRatio: '1182/661' }}>
+            <img
+              src={screen222}
+              alt="screen dashboard"
+              className="w-full h-full object-contain block"
             />
           </div>
         </div>

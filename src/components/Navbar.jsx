@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useTranslation } from 'react-i18next' 
+import { useTranslation } from 'react-i18next'
+import logo from '../assets/logo without background.png'
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -66,9 +67,7 @@ function Navbar() {
       <div className="flex justify-between items-center w-full px-5 md:px-12 py-4 max-w-7xl mx-auto">
         {/* Brand */}
         <Link className="flex items-center gap-2 group" to="/">
-          <span className="material-symbols-outlined text-secondary text-3xl group-hover:scale-110 transition-transform">
-            account_balance_wallet
-          </span>
+          <img src={logo} alt="Surrah logo" className="w-8 h-8 object-contain group-hover:scale-110 transition-transform bg-navy rounded-full p-1" />
           <span className="text-xl md:text-2xl font-bold text-primary tracking-tight">
             {t('app_name')}
           </span>

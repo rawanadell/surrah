@@ -1,4 +1,4 @@
-import screen3 from '../assets/screen3-reports.png'
+import screen3 from '../assets/merged.png'
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
 
@@ -115,12 +115,16 @@ function HowItWorksSection() {
               </ul>
             </div>
             
-            <div className="w-full md:w-1/2 relative rounded-xl overflow-hidden shadow-navy-extra bg-surface p-4 border border-outline-variant/20">
-              <img 
-                alt="A clean, modern financial dashboard app mockup showing a bar chart comparing income and expenses over several months." 
-                className="w-full h-auto object-cover rounded-lg" 
-                src={screen3}
-              />
+            {/* Three phones image */}
+            <div className="w-full md:w-1/2 flex items-center justify-center">
+              <div className="w-full rounded-2xl border border-outline-variant/20 bg-surface-container p-4 shadow-lg overflow-hidden">
+                <img
+                  src={screen3}
+                  alt="screen dashboard"
+                  className="w-full h-auto object-contain block"
+                  style={{ aspectRatio: '337/188' }}
+                />
+              </div>
             </div>
           </div>
         </div>

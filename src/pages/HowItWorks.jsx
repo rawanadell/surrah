@@ -1,4 +1,4 @@
-import screen2 from '../assets/screen2-input.png'
+import screen2 from '../assets/merged.png'
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
 
