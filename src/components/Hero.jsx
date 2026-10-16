@@ -1,11 +1,10 @@
-import screen1 from '../assets/starttt.png'
+import screen1 from '../assets/05.png'
 // 1. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
 // إضافة استدعاء Link
 import { Link } from 'react-router-dom'
 
 function Hero() {
-  // 2. تهيئة أداة الترجمة
   const { t } = useTranslation()
 
   return (
