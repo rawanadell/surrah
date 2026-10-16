@@ -29,7 +29,7 @@ function ContactSection() {
                 </div>
                 <div>
                   <p className="text-lg font-semibold text-navy mb-1">{t('official_email')}</p>
-                  <p className="text-on-surface-variant font-medium">support@example.com</p>
+                  <p className="text-on-surface-variant font-medium">bunyanhq@gmail.com</p>
                 </div>
               </div>
               

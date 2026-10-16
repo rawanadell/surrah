@@ -139,9 +139,9 @@ function Privacy() {
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-6">
               {t('privacy_sec10_desc')}
             </p>
-            <a className="inline-flex items-center gap-2 font-headline-md text-headline-md text-secondary hover:text-secondary-fixed transition-colors font-bold" href="mailto:support@example.com">
+            <a className="inline-flex items-center gap-2 font-headline-md text-headline-md text-secondary hover:text-secondary-fixed transition-colors font-bold" href="mailto:bunyanhq@gmail.com">
+              bunyanhq@gmail.com
               <span className="material-symbols-outlined">mail</span>
-              support@example.com
             </a>
           </section>
         </div>

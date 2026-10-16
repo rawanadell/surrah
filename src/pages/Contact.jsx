@@ -1,8 +1,5 @@
 import { useState } from 'react'
-// 1. استدعاء Link من React Router
 import { Link } from 'react-router-dom'
-import mapImage from '../assets/Image+Background.png'
-// 2. استدعاء مكتبة الترجمة
 import { useTranslation } from 'react-i18next'
 
 function Contact() {
@@ -66,7 +63,7 @@ function Contact() {
                   <p className="font-body-md-manrope text-body-md-manrope text-on-surface-variant">{t('contact_reply_time')}</p>
                 </div>
               </div>
-              <a className="font-label-lg-manrope text-label-lg-manrope text-primary hover:text-secondary transition-colors block rtl:text-right ltr:text-left" href="mailto:support@example.com">support@example.com</a>
+              <a className="font-label-lg-manrope text-label-lg-manrope text-primary hover:text-secondary transition-colors block rtl:text-right ltr:text-left" href="mailto:bunyanhq@gmail.com">bunyanhq@gmail.com</a>
             </div>
 
             <div className="bg-surface-container-lowest p-6 rounded-[16px] shadow-card-light border border-outline-variant/30">
@@ -80,11 +77,17 @@ function Contact() {
                 </div>
               </div>
               <div className="h-48 rounded-lg overflow-hidden relative bg-surface-container-high">
-                <img 
-                  src={mapImage} 
-                  alt={t('contact_map_alt')} 
-                  className="w-full h-full object-cover"
-                />
+                <iframe
+                  title="Cairo Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.4!2d31.2357!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </div>
